@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script>
+		 
+let numeros = [1,2,3,4]
+
+
+//Ejercicio 3 - Punto 1
+	/*
+	numeros.forEach(function sumarNumeros(numeros){
+		var suma = (numeros + 1);
+	});
+	*/
+	function mapCustomizado(funct, numeros) {
+ 	let result = [];
+  	for(let i = 0; i < numeros.length; i++) {
+   	result.push(funct(numeros[i]));
+ 	 }
+  	return result; //mapCustomizado tiene un return del nuevo array
+	}
+	var result = mapCustomizado(function(numeros) {
+  	var sumar = numeros + 1;
+  	console.log(sumar)
+  	return sumar 
+	}, numeros);
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
